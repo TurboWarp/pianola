@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "project": "868607896",
+  "projectSha256": "a347792e176e9547b16b60d4a4c0b6a58a1be7360dacf1eb297583ce705fd47e",
+  "recordedAt": "2026-10-10T21:03:53.761Z",
+  "frames": 29,
+  "passes": [1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  "inputs": [
+    {"frame":0,"type":"greenFlag"},
+    {"frame":0,"type":"mouse","x":291.96,"y":69.43},
+    {"frame":1,"type":"mouse","x":-7.97,"y":106.03},
+    {"frame":2,"type":"mouse","x":-179.78,"y":140.87},
+    {"frame":3,"type":"mouse","x":-205.76,"y":149.13},
+    {"frame":8,"type":"mouse","x":-209.89,"y":149.72},
+    {"frame":9,"type":"mouse","x":-211.66,"y":150.31},
+    {"frame":11,"type":"variable","target":null,"id":"iap~ICV)c5BYQ4/s5%aK","value":1.66},
+    {"frame":14,"type":"mouse","x":83.54,"y":62.93},
+    {"frame":15,"type":"mouse","x":119.56,"y":42.86},
+    {"frame":16,"type":"mouse","x":352.18,"y":9.21},
+    {"frame":17,"type":"mouse","x":352.77,"y":8.03},
+    {"frame":25,"type":"mouse","x":352.77,"y":8.62}
+  ]
+}

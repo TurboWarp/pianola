@@ -1,0 +1,20 @@
+{
+  "name": "@turbowarp/pianola",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Tooling for benchmarking TurboWarp on real Scratch projects.",
+  "type": "module",
+  "license": "MPL-2.0",
+  "scripts": {
+    "build": "node build/build.js",
+    "start": "node coordinator/server.js"
+  },
+  "dependencies": {
+    "@turbowarp/scratch-storage": "^2.0.0",
+    "@turbowarp/scratch-svg-renderer": "^1.1.0",
+    "buffer": "^6.0.3",
+    "events": "^3.3.0",
+    "scratch-render": "github:TurboWarp/scratch-render#develop",
+    "webpack": "^5.97.0"
+  }
+}

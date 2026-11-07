@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>runner</title>
+  <link rel="stylesheet" href="ui.css">
+  <style>
+    html, body { font-size: 14px; line-height: 1.5; }
+    body { padding: 16px; max-width: 640px; }
+    h1 { font-size: 16px; margin: 0 0 12px; color: var(--strong); }
+    #readback-warning { margin-bottom: 16px; border-radius: 4px; }
+    tr.bad td { color: #fff; background: #c62828; }
+    form { display: flex; gap: 8px; margin-bottom: 16px; }
+    input, button { font: inherit; padding: 6px 10px; background: var(--panel); color: var(--strong); border: 1px solid var(--border); border-radius: 4px; }
+    input { flex: 1; min-width: 0; }
+    button { cursor: pointer; background: var(--control); }
+    table { border-collapse: collapse; margin-bottom: 16px; }
+    th, td { text-align: left; padding: 1px 12px 1px 0; vertical-align: top; }
+    th { color: var(--muted); font-weight: normal; white-space: nowrap; }
+    td { word-break: break-word; }
+    h2 { font-size: 14px; margin: 20px 0 4px; color: var(--strong); }
+    ol { padding-left: 20px; }
+  </style>
+  <script type="module" src="index.js"></script>
+</head>
+<body>
+  <h1>runner</h1>
+  <p id="readback-warning" class="warning" hidden></p>
+  <form id="start">
+    <input id="name" placeholder="device name, e.g. ipad-9th-gen" autocomplete="off" required>
+    <button>Start worker</button>
+  </form>
+  <table id="device"></table>
+  <p>
+    Each tab or window runs jobs on its own; open more for parallel runs (noisier timings).
+    Keep the worker tab visible and the screen on.
+  </p>
+  <h2>Chrome traces (optional)</h2>
+  <p>
+    To let this device record a Chrome trace of each job (for batches submitted with
+    <code>--trace</code>), install the tracer extension in Chrome, Edge, or ChromeOS:
+  </p>
+  <ol>
+    <li><a href="extension.zip">Download the extension</a> and extract it.</li>
+    <li>Open <code>chrome://extensions</code> and turn on <b>Developer mode</b>.</li>
+    <li>Click <b>Load unpacked</b> and pick the extracted <code>profiler-extension</code> folder.</li>
+  </ol>
+  <p>Workers then show "tracing available" in their status line.</p>
+  <p><a href="queue.html">Queue</a> &middot; <a href="/painter/">Painter</a></p>
+</body>
+</html>

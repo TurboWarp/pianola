@@ -1,0 +1,221 @@
+:root {
+  color-scheme: dark;
+  --bg: #16181d;
+  --panel: #1f2229;
+  --control: #2a2e37;
+  --border: #3a3f4b;
+  --text: #e4e6eb;
+  --muted: #8b90a0;
+  --accent: #ff4c4c;
+  --ok: #3ccf7a;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --bg: #f5f6f8;
+    --panel: #fff;
+    --control: #e8eaef;
+    --border: #c9cdd6;
+    --text: #1f2229;
+    --muted: #6b7080;
+  }
+}
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.4 system-ui, sans-serif;
+}
+button {
+  font: inherit;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--control);
+  color: var(--text);
+  cursor: pointer;
+}
+button:hover:not(:disabled) {
+  border-color: var(--muted);
+}
+button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+input[type="number"] {
+  width: 4em;
+  font: inherit;
+}
+.hint {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+#picker {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+}
+#picker table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#picker th, #picker td {
+  text-align: left;
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--control);
+}
+#picker td:nth-child(3),
+#picker td:last-child {
+  white-space: nowrap;
+}
+#picker td:last-child {
+  text-align: right;
+}
+#picker label {
+  margin-right: 8px;
+  color: var(--muted);
+}
+
+#session {
+  display: flex;
+  height: 100%;
+}
+#session[hidden] {
+  display: none;
+}
+#stage-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 12px;
+  gap: 8px;
+}
+#project-controls {
+  display: flex;
+  gap: 8px;
+}
+#stage {
+  flex: 1;
+  min-height: 0;
+  background: black;
+}
+#sidebar {
+  width: 300px;
+  padding: 12px 16px;
+  background: var(--panel);
+  overflow-y: auto;
+}
+#sidebar h2 {
+  margin: 0;
+  font-size: 18px;
+}
+#byline {
+  margin-bottom: 8px;
+}
+#byline a {
+  color: inherit;
+}
+#project-controls label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.status {
+  padding: 8px;
+  border-radius: 4px;
+  background: var(--control);
+}
+.status[data-state="recording"] {
+  background: var(--accent);
+  color: white;
+}
+.status[data-state="banned"],
+.banned {
+  padding: 8px;
+  border-radius: 4px;
+  background: var(--accent);
+  color: white;
+}
+.status[data-state="saved"] {
+  background: var(--ok);
+  color: black;
+}
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+  align-items: center;
+}
+.buttons [hidden] {
+  display: none;
+}
+.buttons a {
+  color: var(--muted);
+}
+#stats dt {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 8px;
+}
+#stats dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+#stat-cpu {
+  font-size: 22px;
+  font-weight: bold;
+}
+#stats .target {
+  color: var(--muted);
+}
+.cpu-bar {
+  display: flex;
+  height: 10px;
+  margin: 4px 0;
+  border-radius: 5px;
+  overflow: hidden;
+  background: var(--control);
+}
+.cpu-legend {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.swatch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 4px;
+  border-radius: 2px;
+}
+#bar-execute, .swatch.execute {
+  background: #4c97ff;
+}
+#bar-draw, .swatch.draw {
+  background: #ff8c1a;
+}
+#stats label.target {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+}
+#errors h3 {
+  color: var(--accent);
+  font-size: 14px;
+}
+#error-list {
+  padding-left: 16px;
+  font-size: 12px;
+  word-break: break-word;
+}

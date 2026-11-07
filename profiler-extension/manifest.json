@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Pianola profiler",
+  "version": "1.1",
+  "description": "Records a Chrome trace of each benchmark job a worker runs and uploads it with the result.",
+  "permissions": ["debugger"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/runner/worker.html*", "https://*/runner/worker.html*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

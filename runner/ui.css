@@ -1,0 +1,43 @@
+/* Colors shared by the runner's pages; follows the system light or dark setting. */
+:root {
+  color-scheme: dark;
+  --bg: #000;
+  --panel: #111;
+  --control: #222;
+  --border: #444;
+  --text: #bbb;
+  --strong: #eee;
+  --muted: #777;
+  --link: #8af;
+  --bad: #f66;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --bg: #fff;
+    --panel: #f4f4f4;
+    --control: #eee;
+    --border: #bbb;
+    --text: #333;
+    --strong: #000;
+    --muted: #777;
+    --link: #06c;
+    --bad: #c00;
+  }
+}
+html, body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-monospace, Menlo, monospace;
+}
+a {
+  color: var(--link);
+}
+.warning {
+  margin: 0;
+  padding: 8px 12px;
+  background: #c62828;
+  color: #fff;
+  font-weight: bold;
+}
